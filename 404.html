@@ -16,7 +16,39 @@
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&amp;display=swap" rel="stylesheet"> 
 
 <link rel="stylesheet" type="text/css" href="css/main.css">
-
+<script>
+      document.onkeydown = (e) => {
+          if (e.key == 123) {
+              e.preventDefault();
+          }
+          if (e.ctrlKey && e.shiftKey && e.key == 'I') {
+              e.preventDefault();
+          }
+          if (e.ctrlKey && e.shiftKey && e.key == 'C') {
+              e.preventDefault();
+          }
+          if (e.ctrlKey && e.shiftKey && e.key == 'J') {
+              e.preventDefault();
+          }
+          if (e.ctrlKey && e.key == 'U') {
+              e.preventDefault();
+          }
+          if (e.key == 123 || e.key == 'F12') {
+          e.preventDefault();
+      }
+      };
+      </script>
+      <script>
+        document.addEventListener('keydown', (e) => {
+            if (e.key == 123 || (e.ctrlKey && e.shiftKey && e.key == 'I') || (e.ctrlKey && e.key == 'U')) {
+                e.preventDefault();
+            }
+        });
+    
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
+</script>
 <style>
     body {
       margin: 0;
