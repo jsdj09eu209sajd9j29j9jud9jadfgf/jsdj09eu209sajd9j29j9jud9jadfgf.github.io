@@ -17,7 +17,39 @@
 
         <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
-
+    <script>
+      document.onkeydown = (e) => {
+          if (e.key == 123) {
+              e.preventDefault();
+          }
+          if (e.ctrlKey && e.shiftKey && e.key == 'I') {
+              e.preventDefault();
+          }
+          if (e.ctrlKey && e.shiftKey && e.key == 'C') {
+              e.preventDefault();
+          }
+          if (e.ctrlKey && e.shiftKey && e.key == 'J') {
+              e.preventDefault();
+          }
+          if (e.ctrlKey && e.key == 'U') {
+              e.preventDefault();
+          }
+          if (e.key == 123 || e.key == 'F12') {
+          e.preventDefault();
+      }
+      };
+      </script>
+      <script>
+        document.addEventListener('keydown', (e) => {
+            if (e.key == 123 || (e.ctrlKey && e.shiftKey && e.key == 'I') || (e.ctrlKey && e.key == 'U')) {
+                e.preventDefault();
+            }
+        });
+    
+        document.addEventListener('contextmenu', (e) => {
+            e.preventDefault();
+        });
+    </script>
     <body>
         <nav id="top">
             <div class="marker"></div>
